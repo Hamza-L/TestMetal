@@ -8,23 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		BBD16859257DFB8600B2162E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD16858257DFB8600B2162E /* AppDelegate.swift */; };
-		BBD1685B257DFB8600B2162E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD1685A257DFB8600B2162E /* ContentView.swift */; };
 		BBD1685D257DFB8800B2162E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BBD1685C257DFB8800B2162E /* Assets.xcassets */; };
 		BBD16860257DFB8800B2162E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BBD1685F257DFB8800B2162E /* Preview Assets.xcassets */; };
 		BBD16863257DFB8800B2162E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BBD16861257DFB8800B2162E /* Main.storyboard */; };
 		BBD1686F257DFB8800B2162E /* TestMetalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD1686E257DFB8800B2162E /* TestMetalTests.swift */; };
-		BBD1687A257DFB8800B2162E /* TestMetalUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD16879257DFB8800B2162E /* TestMetalUITests.swift */; };
+		BBD16888257DFCA300B2162E /* MetalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD16887257DFCA300B2162E /* MetalView.swift */; };
+		BBD1688B257E978500B2162E /* Renderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD1688A257E978500B2162E /* Renderer.swift */; };
+		BBD1688D257E9D1200B2162E /* Shaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = BBD1688C257E9D1200B2162E /* Shaders.metal */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		BBD1686B257DFB8800B2162E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BBD1684D257DFB8600B2162E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = BBD16854257DFB8600B2162E;
-			remoteInfo = TestMetal;
-		};
-		BBD16876257DFB8800B2162E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BBD1684D257DFB8600B2162E /* Project object */;
 			proxyType = 1;
@@ -36,7 +30,6 @@
 /* Begin PBXFileReference section */
 		BBD16855257DFB8600B2162E /* TestMetal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestMetal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBD16858257DFB8600B2162E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BBD1685A257DFB8600B2162E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		BBD1685C257DFB8800B2162E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BBD1685F257DFB8800B2162E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		BBD16862257DFB8800B2162E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -45,9 +38,9 @@
 		BBD1686A257DFB8800B2162E /* TestMetalTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestMetalTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBD1686E257DFB8800B2162E /* TestMetalTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestMetalTests.swift; sourceTree = "<group>"; };
 		BBD16870257DFB8800B2162E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BBD16875257DFB8800B2162E /* TestMetalUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestMetalUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		BBD16879257DFB8800B2162E /* TestMetalUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestMetalUITests.swift; sourceTree = "<group>"; };
-		BBD1687B257DFB8800B2162E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BBD16887257DFCA300B2162E /* MetalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetalView.swift; sourceTree = "<group>"; };
+		BBD1688A257E978500B2162E /* Renderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Renderer.swift; sourceTree = "<group>"; };
+		BBD1688C257E9D1200B2162E /* Shaders.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Shaders.metal; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,13 +58,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BBD16872257DFB8800B2162E /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -80,7 +66,6 @@
 			children = (
 				BBD16857257DFB8600B2162E /* TestMetal */,
 				BBD1686D257DFB8800B2162E /* TestMetalTests */,
-				BBD16878257DFB8800B2162E /* TestMetalUITests */,
 				BBD16856257DFB8600B2162E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -90,7 +75,6 @@
 			children = (
 				BBD16855257DFB8600B2162E /* TestMetal.app */,
 				BBD1686A257DFB8800B2162E /* TestMetalTests.xctest */,
-				BBD16875257DFB8800B2162E /* TestMetalUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -98,13 +82,10 @@
 		BBD16857257DFB8600B2162E /* TestMetal */ = {
 			isa = PBXGroup;
 			children = (
-				BBD16858257DFB8600B2162E /* AppDelegate.swift */,
-				BBD1685A257DFB8600B2162E /* ContentView.swift */,
-				BBD1685C257DFB8800B2162E /* Assets.xcassets */,
-				BBD16861257DFB8800B2162E /* Main.storyboard */,
-				BBD16864257DFB8800B2162E /* Info.plist */,
-				BBD16865257DFB8800B2162E /* TestMetal.entitlements */,
-				BBD1685E257DFB8800B2162E /* Preview Content */,
+				BBD16889257DFEEC00B2162E /* Other */,
+				BBD16887257DFCA300B2162E /* MetalView.swift */,
+				BBD1688A257E978500B2162E /* Renderer.swift */,
+				BBD1688C257E9D1200B2162E /* Shaders.metal */,
 			);
 			path = TestMetal;
 			sourceTree = "<group>";
@@ -126,13 +107,17 @@
 			path = TestMetalTests;
 			sourceTree = "<group>";
 		};
-		BBD16878257DFB8800B2162E /* TestMetalUITests */ = {
+		BBD16889257DFEEC00B2162E /* Other */ = {
 			isa = PBXGroup;
 			children = (
-				BBD16879257DFB8800B2162E /* TestMetalUITests.swift */,
-				BBD1687B257DFB8800B2162E /* Info.plist */,
+				BBD16858257DFB8600B2162E /* AppDelegate.swift */,
+				BBD1685C257DFB8800B2162E /* Assets.xcassets */,
+				BBD16861257DFB8800B2162E /* Main.storyboard */,
+				BBD16864257DFB8800B2162E /* Info.plist */,
+				BBD16865257DFB8800B2162E /* TestMetal.entitlements */,
+				BBD1685E257DFB8800B2162E /* Preview Content */,
 			);
-			path = TestMetalUITests;
+			path = Other;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -173,24 +158,6 @@
 			productReference = BBD1686A257DFB8800B2162E /* TestMetalTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		BBD16874257DFB8800B2162E /* TestMetalUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = BBD16884257DFB8800B2162E /* Build configuration list for PBXNativeTarget "TestMetalUITests" */;
-			buildPhases = (
-				BBD16871257DFB8800B2162E /* Sources */,
-				BBD16872257DFB8800B2162E /* Frameworks */,
-				BBD16873257DFB8800B2162E /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				BBD16877257DFB8800B2162E /* PBXTargetDependency */,
-			);
-			name = TestMetalUITests;
-			productName = TestMetalUITests;
-			productReference = BBD16875257DFB8800B2162E /* TestMetalUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -205,10 +172,6 @@
 						CreatedOnToolsVersion = 11.3.1;
 					};
 					BBD16869257DFB8800B2162E = {
-						CreatedOnToolsVersion = 11.3.1;
-						TestTargetID = BBD16854257DFB8600B2162E;
-					};
-					BBD16874257DFB8800B2162E = {
 						CreatedOnToolsVersion = 11.3.1;
 						TestTargetID = BBD16854257DFB8600B2162E;
 					};
@@ -229,7 +192,6 @@
 			targets = (
 				BBD16854257DFB8600B2162E /* TestMetal */,
 				BBD16869257DFB8800B2162E /* TestMetalTests */,
-				BBD16874257DFB8800B2162E /* TestMetalUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -252,13 +214,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BBD16873257DFB8800B2162E /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -266,7 +221,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BBD1685B257DFB8600B2162E /* ContentView.swift in Sources */,
+				BBD1688D257E9D1200B2162E /* Shaders.metal in Sources */,
+				BBD16888257DFCA300B2162E /* MetalView.swift in Sources */,
+				BBD1688B257E978500B2162E /* Renderer.swift in Sources */,
 				BBD16859257DFB8600B2162E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -279,14 +236,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BBD16871257DFB8800B2162E /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				BBD1687A257DFB8800B2162E /* TestMetalUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -294,11 +243,6 @@
 			isa = PBXTargetDependency;
 			target = BBD16854257DFB8600B2162E /* TestMetal */;
 			targetProxy = BBD1686B257DFB8800B2162E /* PBXContainerItemProxy */;
-		};
-		BBD16877257DFB8800B2162E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = BBD16854257DFB8600B2162E /* TestMetal */;
-			targetProxy = BBD16876257DFB8800B2162E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -431,14 +375,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = TestMetal/TestMetal.entitlements;
+				CODE_SIGN_ENTITLEMENTS = TestMetal/Other/TestMetal.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_ASSET_PATHS = "\"TestMetal/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"TestMetal/Other/Preview Content\"";
 				DEVELOPMENT_TEAM = QK5VYW662U;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = TestMetal/Info.plist;
+				INFOPLIST_FILE = TestMetal/Other/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -454,14 +398,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = TestMetal/TestMetal.entitlements;
+				CODE_SIGN_ENTITLEMENTS = TestMetal/Other/TestMetal.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_ASSET_PATHS = "\"TestMetal/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"TestMetal/Other/Preview Content\"";
 				DEVELOPMENT_TEAM = QK5VYW662U;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = TestMetal/Info.plist;
+				INFOPLIST_FILE = TestMetal/Other/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -517,46 +461,6 @@
 			};
 			name = Release;
 		};
-		BBD16885257DFB8800B2162E /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = QK5VYW662U;
-				INFOPLIST_FILE = TestMetalUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@loader_path/../Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = test.TestMetalUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TEST_TARGET_NAME = TestMetal;
-			};
-			name = Debug;
-		};
-		BBD16886257DFB8800B2162E /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = QK5VYW662U;
-				INFOPLIST_FILE = TestMetalUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@loader_path/../Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = test.TestMetalUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TEST_TARGET_NAME = TestMetal;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -583,15 +487,6 @@
 			buildConfigurations = (
 				BBD16882257DFB8800B2162E /* Debug */,
 				BBD16883257DFB8800B2162E /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		BBD16884257DFB8800B2162E /* Build configuration list for PBXNativeTarget "TestMetalUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				BBD16885257DFB8800B2162E /* Debug */,
-				BBD16886257DFB8800B2162E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
