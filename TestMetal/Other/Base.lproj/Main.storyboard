@@ -687,7 +687,7 @@
                     <window key="window" title="Render Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" titlebarAppearsTransparent="YES" id="4I4-zj-D55">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-                        <rect key="contentRect" x="847" y="442" width="480" height="270"/>
+                        <rect key="contentRect" x="738" y="442" width="480" height="270"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1177"/>
                         <connections>
                             <outlet property="delegate" destination="y45-tb-t2E" id="75k-3m-n53"/>
@@ -706,7 +706,7 @@
             <objects>
                 <viewController id="Fx9-zo-MQ8" sceneMemberID="viewController">
                     <view key="view" id="2eT-5B-1Uc" customClass="MetalView" customModule="TestMetal" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="0.0" width="800" height="500"/>
+                        <rect key="frame" x="0.0" y="0.0" width="800" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     </view>
                 </viewController>

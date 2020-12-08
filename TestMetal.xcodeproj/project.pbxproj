@@ -15,6 +15,7 @@
 		BBD16888257DFCA300B2162E /* MetalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD16887257DFCA300B2162E /* MetalView.swift */; };
 		BBD1688B257E978500B2162E /* Renderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD1688A257E978500B2162E /* Renderer.swift */; };
 		BBD1688D257E9D1200B2162E /* Shaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = BBD1688C257E9D1200B2162E /* Shaders.metal */; };
+		BBD16891257F018A00B2162E /* Types.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD16890257F018A00B2162E /* Types.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +42,7 @@
 		BBD16887257DFCA300B2162E /* MetalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetalView.swift; sourceTree = "<group>"; };
 		BBD1688A257E978500B2162E /* Renderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Renderer.swift; sourceTree = "<group>"; };
 		BBD1688C257E9D1200B2162E /* Shaders.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Shaders.metal; sourceTree = "<group>"; };
+		BBD16890257F018A00B2162E /* Types.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Types.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 				BBD16887257DFCA300B2162E /* MetalView.swift */,
 				BBD1688A257E978500B2162E /* Renderer.swift */,
 				BBD1688C257E9D1200B2162E /* Shaders.metal */,
+				BBD16890257F018A00B2162E /* Types.swift */,
 			);
 			path = TestMetal;
 			sourceTree = "<group>";
@@ -221,9 +224,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BBD1688D257E9D1200B2162E /* Shaders.metal in Sources */,
 				BBD16888257DFCA300B2162E /* MetalView.swift in Sources */,
 				BBD1688B257E978500B2162E /* Renderer.swift in Sources */,
+				BBD16891257F018A00B2162E /* Types.swift in Sources */,
+				BBD1688D257E9D1200B2162E /* Shaders.metal in Sources */,
 				BBD16859257DFB8600B2162E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
