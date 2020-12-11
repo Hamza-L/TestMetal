@@ -678,7 +678,7 @@
                 <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
                 <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="0.0"/>
+            <point key="canvasLocation" x="83" y="-71"/>
         </scene>
         <!--Window Controller-->
         <scene sceneID="0C9-Fw-EEJ">
@@ -687,7 +687,7 @@
                     <window key="window" title="Render Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" titlebarAppearsTransparent="YES" id="4I4-zj-D55">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-                        <rect key="contentRect" x="738" y="442" width="480" height="270"/>
+                        <rect key="contentRect" x="738" y="442" width="480" height="480"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1177"/>
                         <connections>
                             <outlet property="delegate" destination="y45-tb-t2E" id="75k-3m-n53"/>
@@ -704,15 +704,43 @@
         <!--View Controller-->
         <scene sceneID="c0C-sN-RLi">
             <objects>
-                <viewController id="Fx9-zo-MQ8" sceneMemberID="viewController">
-                    <view key="view" id="2eT-5B-1Uc" customClass="MetalView" customModule="TestMetal" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="0.0" width="800" height="600"/>
+                <viewController id="Fx9-zo-MQ8" customClass="ViewController" customModule="TestMetal" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="2eT-5B-1Uc">
+                        <rect key="frame" x="0.0" y="0.0" width="800" height="580"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="1Z8-Pj-GLs" customClass="MetalView" customModule="TestMetal" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="580" height="580"/>
+                            </customView>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="gHj-gY-RN7">
+                                <rect key="frame" x="600" y="544" width="106" height="18"/>
+                                <buttonCell key="cell" type="check" title="WireFrame" bezelStyle="regularSquare" imagePosition="left" inset="2" id="epJ-Z8-vOF">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="chkWireFrame_Click:" target="Fx9-zo-MQ8" id="lxa-CN-pmm"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="1Z8-Pj-GLs" secondAttribute="trailing" constant="220" id="07v-dH-nne"/>
+                            <constraint firstAttribute="bottom" secondItem="1Z8-Pj-GLs" secondAttribute="bottom" id="Eby-vX-TZC"/>
+                            <constraint firstItem="1Z8-Pj-GLs" firstAttribute="leading" secondItem="2eT-5B-1Uc" secondAttribute="leading" id="NAL-Zn-jkF"/>
+                            <constraint firstItem="gHj-gY-RN7" firstAttribute="top" secondItem="2eT-5B-1Uc" secondAttribute="top" constant="20" id="hNy-Q5-Viu"/>
+                            <constraint firstAttribute="trailing" secondItem="gHj-gY-RN7" secondAttribute="trailing" constant="96" id="jqf-Ey-xUN"/>
+                            <constraint firstItem="gHj-gY-RN7" firstAttribute="leading" secondItem="1Z8-Pj-GLs" secondAttribute="trailing" constant="22" id="nbx-k5-nMG"/>
+                            <constraint firstItem="1Z8-Pj-GLs" firstAttribute="top" secondItem="2eT-5B-1Uc" secondAttribute="top" id="oeA-r6-mH0"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="chkWireFrame" destination="gHj-gY-RN7" id="z4A-eD-OiM"/>
+                        <outlet property="mainMetalView" destination="1Z8-Pj-GLs" id="hdr-fC-n3r"/>
+                    </connections>
                 </viewController>
                 <customObject id="d0b-6R-KcL" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="82" y="864"/>
+            <point key="canvasLocation" x="76" y="1036"/>
         </scene>
     </scenes>
 </document>

@@ -18,11 +18,16 @@ class MetalView: MTKView {
         self.device = MTLCreateSystemDefaultDevice()
         self.colorPixelFormat = .bgra8Unorm
         self.clearColor = MTLClearColor(red: 0.1, green: 0.1, blue: 0.1, alpha: 1)
+        self.depthStencilPixelFormat = .depth32Float
         
         renderer = Renderer(device: device!)
         
         self.delegate = renderer
         
+    }
+    
+    func toggleWireFrame(wireFrameON: Bool){
+        renderer.toggleWireFrame(wireFrameON: wireFrameON)
     }
     
 }

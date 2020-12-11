@@ -19,15 +19,21 @@ struct VertexOut {
     simd_float4 color;
 };
 
-struct Constants {
-    float animateBy;
+struct ModelConstants{
+    float4x4 modelMatrix;
 };
 
-vertex VertexOut basic_vertex_function(const VertexIn vIn [[  stage_in ]], constant Constants &constants [[ buffer(1)]]){
+struct SceneConstants{
+    float4x4 PerspectiveMatrix;
+};
+
+
+vertex VertexOut basic_vertex_function(const VertexIn vIn [[  stage_in ]],
+                                       constant ModelConstants &modelConstants [[ buffer(1) ]],
+                                       constant SceneConstants &sceneConstants [[ buffer(2) ]]){
     
     VertexOut vOut;
-    vOut.position = simd_float4(vIn.position,1);
-    vOut.position.x += cos(constants.animateBy);
+    vOut.position = sceneConstants.PerspectiveMatrix * modelConstants.modelMatrix*simd_float4(vIn.position,1);
     vOut.color = vIn.color *1;
     
     return vOut;
