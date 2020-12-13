@@ -14,6 +14,8 @@ class Scene: Node{
     var sceneConstants = SceneConstants()
     var aspectRatio: Float = 1.0
     
+    var light = Light()
+    
     init(device: MTLDevice){
         self.device = device
         super.init()
@@ -28,6 +30,7 @@ class Scene: Node{
         NearZ: 0.1,
         FarZ: 100)
         commandEncoder.setVertexBytes(&sceneConstants, length: MemoryLayout<SceneConstants>.stride, index: 2)
+        commandEncoder.setFragmentBytes(&light, length: MemoryLayout<Light>.stride, index: 1)
         super.render(commandEncoder: commandEncoder, deltaTime: deltaTime)
     }
 }

@@ -27,6 +27,10 @@ struct SceneConstants{
     float4x4 PerspectiveMatrix;
 };
 
+struct Light{
+    float3 lightPos;
+};
+
 
 vertex VertexOut basic_vertex_function(const VertexIn vIn [[  stage_in ]],
                                        constant ModelConstants &modelConstants [[ buffer(1) ]],
@@ -39,7 +43,8 @@ vertex VertexOut basic_vertex_function(const VertexIn vIn [[  stage_in ]],
     return vOut;
 }
 
-fragment simd_float4 basic_fragment_function( VertexOut vIn [[ stage_in ]]){
+fragment simd_float4 basic_fragment_function( VertexOut vIn [[ stage_in ]],
+                                             constant Light &light [[ buffer(1) ]]){
     return vIn.color;
 }
 

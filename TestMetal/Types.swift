@@ -20,3 +20,7 @@ struct ModelConstants{
 struct SceneConstants{
     var projectionMatrix = matrix_identity_float4x4
 }
+
+struct Light{
+    var lightPos = SIMD3<Float>(repeating: 0)
+}

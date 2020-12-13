@@ -18,6 +18,10 @@ import MetalKit
      
     var wireFrameON: Bool = false
     
+    var mousePos = SIMD2<Float>(0,0)
+    var width: Int!
+    var height: Int!
+    
     init(device: MTLDevice){
         super.init()
         commandQueue = device.makeCommandQueue()
@@ -41,7 +45,21 @@ import MetalKit
     
     func mtkView(_ view: MTKView, drawableSizeWillChange size: CGSize) {
         scene.aspectRatio = Float(Float(view.bounds.width)/Float(view.bounds.height))
+        updateTrackingArea(view: view)
     }
+    
+    func updateTrackingArea(view: MTKView){
+        let area = NSTrackingArea(rect: view.bounds,
+                                  options: [NSTrackingArea.Options.activeAlways,NSTrackingArea.Options.mouseMoved,NSTrackingArea.Options.enabledDuringMouseDrag],
+                                  owner: view,
+                                  userInfo: nil)
+        view.addTrackingArea(area)
+        self.width = Int(view.bounds.width)
+        self.height = Int(view.bounds.height)
+        
+    }
+    
+   
     
     func draw(in view: MTKView) {
         guard let drawable = view.currentDrawable, let renderPassDescriptor = view.currentRenderPassDescriptor else { return }
@@ -52,7 +70,10 @@ import MetalKit
         
         if(wireFrameON){
             commandEncoder?.setTriangleFillMode( .lines )
+            
         }
+        
+        scene.light.lightPos = SIMD3<Float>(0,0,0)
        
         let deltaTime = 1 / Float(view.preferredFramesPerSecond)
         scene.render(commandEncoder: commandEncoder!, deltaTime: deltaTime)

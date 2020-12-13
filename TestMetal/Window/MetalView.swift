@@ -22,12 +22,23 @@ class MetalView: MTKView {
         
         renderer = Renderer(device: device!)
         
+        renderer.updateTrackingArea(view: self)
+        
         self.delegate = renderer
         
     }
     
+    
     func toggleWireFrame(wireFrameON: Bool){
         renderer.toggleWireFrame(wireFrameON: wireFrameON)
+    }
+    
+    override func mouseMoved(with event: NSEvent) {
+        let x: Float = Float(event.locationInWindow.x)
+        let y: Float = Float(event.locationInWindow.y)
+        
+        renderer.mousePos = SIMD2<Float>(x,y)
+        
     }
     
 }
