@@ -19,8 +19,8 @@ import MetalKit
     var wireFrameON: Bool = false
     
     var mousePos = SIMD2<Float>(0,0)
-    var width: Int!
-    var height: Int!
+    var width: Float!
+    var height: Float!
     
     init(device: MTLDevice){
         super.init()
@@ -54,8 +54,8 @@ import MetalKit
                                   owner: view,
                                   userInfo: nil)
         view.addTrackingArea(area)
-        self.width = Int(view.bounds.width)
-        self.height = Int(view.bounds.height)
+        self.width = Float(view.bounds.width)
+        self.height = Float(view.bounds.height)
         
     }
     
@@ -73,8 +73,14 @@ import MetalKit
             
         }
         
-        scene.light.lightPos = SIMD3<Float>(0,0,0)
-       
+        let mousePos = MetalView.getMousePosition()
+        let posX: Float = Float(mousePos.x/width - 0.5)*4
+        let posY: Float = Float(mousePos.y/height - 0.5)*4
+        
+        scene.light.lightPos = SIMD3<Float>(posX,posY,-2.4)
+        
+        //print(scene.light.lightPos)
+               
         let deltaTime = 1 / Float(view.preferredFramesPerSecond)
         scene.render(commandEncoder: commandEncoder!, deltaTime: deltaTime)
         

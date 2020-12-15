@@ -11,6 +11,7 @@ import MetalKit
 struct Vertex{
     var position: SIMD3<Float>
     var color: SIMD4<Float>
+    var normal: SIMD3<Float>!
 }
 
 struct ModelConstants{
@@ -23,4 +24,9 @@ struct SceneConstants{
 
 struct Light{
     var lightPos = SIMD3<Float>(repeating: 0)
+    var color = SIMD3<Float>(repeating: 1)
+    var diffIntensity : Float = 1
+    var specIntensity : Float = 1
+    var shinniness: Float = 16
+    
 }

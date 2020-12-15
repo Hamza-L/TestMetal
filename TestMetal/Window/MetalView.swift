@@ -11,13 +11,14 @@ import MetalKit
 class MetalView: MTKView {
     
     var renderer:Renderer!
+    static var mousePos: SIMD2<Float> = SIMD2<Float>(0,0)
     
     required init(coder: NSCoder) {
         super.init(coder: coder)
         
         self.device = MTLCreateSystemDefaultDevice()
         self.colorPixelFormat = .bgra8Unorm
-        self.clearColor = MTLClearColor(red: 0.1, green: 0.1, blue: 0.1, alpha: 1)
+        self.clearColor = MTLClearColor(red: 0, green: 0, blue: 0, alpha: 1)
         self.depthStencilPixelFormat = .depth32Float
         
         renderer = Renderer(device: device!)
@@ -37,8 +38,12 @@ class MetalView: MTKView {
         let x: Float = Float(event.locationInWindow.x)
         let y: Float = Float(event.locationInWindow.y)
         
-        renderer.mousePos = SIMD2<Float>(x,y)
+        MetalView.mousePos = SIMD2<Float>(x,y)
         
+    }
+    
+    public static func getMousePosition()->SIMD2<Float>{
+        return mousePos
     }
     
 }

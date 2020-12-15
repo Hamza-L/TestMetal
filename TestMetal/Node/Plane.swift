@@ -21,16 +21,16 @@ class Plane: Primitive{
 
         vertices = [
                    Vertex(position: SIMD3<Float>( 1,  1,  0), //v1
-                          color: color),
+                        color: color, normal: SIMD3<Float>( 0,  0,  1)),
                    
-                   Vertex(position: SIMD3<Float>(-1, 1,  0),  //v2
-                          color: color),
+                   Vertex(position: SIMD3<Float>(-1,  1,  0), //v2
+                        color: color, normal: SIMD3<Float>( 0,  0,  1)),
                    
-                   Vertex(position: SIMD3<Float>( 1,  -1,  0), //v3
-                          color: color),
+                   Vertex(position: SIMD3<Float>( 1, -1,  0), //v3
+                        color: color, normal: SIMD3<Float>( 0,  0,  1)),
                    
-                   Vertex(position: SIMD3<Float>( -1,  -1,  0), //v4
-                          color: color),]
+                   Vertex(position: SIMD3<Float>(-1, -1,  0), //v4
+                        color: color, normal: SIMD3<Float>( 0,  0,  1))]
                
         indices =  [0, 1, 3,
                     0, 3, 2]

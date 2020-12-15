@@ -35,9 +35,15 @@ class Node {
         modelMatrix.rotate(axis: axis, angle: angle)
     }
     
+    func mult(matrix: simd_float4x4){
+        modelMatrix = matrix * modelMatrix
+    }
+    
     func render(commandEncoder: MTLRenderCommandEncoder, deltaTime: Float){
         for childNode in children{
+            childNode.mult(matrix: modelMatrix)
             childNode.render(commandEncoder: commandEncoder, deltaTime: deltaTime)
+            childNode.mult(matrix: modelMatrix.inverse)
         }
     
         //only draws renderable types among the nodes.

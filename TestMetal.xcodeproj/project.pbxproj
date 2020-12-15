@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BB2A93A32586F2CC00B01CA3 /* Icosahedron.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2A93A22586F2CC00B01CA3 /* Icosahedron.swift */; };
 		BBD16859257DFB8600B2162E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD16858257DFB8600B2162E /* AppDelegate.swift */; };
 		BBD1685D257DFB8800B2162E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BBD1685C257DFB8800B2162E /* Assets.xcassets */; };
 		BBD16860257DFB8800B2162E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BBD1685F257DFB8800B2162E /* Preview Assets.xcassets */; };
@@ -21,7 +22,7 @@
 		BBD1692025814E2A00B2162E /* Plane.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD1691F25814E2A00B2162E /* Plane.swift */; };
 		BBD169222581523900B2162E /* Primitive.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD169212581523900B2162E /* Primitive.swift */; };
 		BBD169242581562F00B2162E /* BasicScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD169232581562F00B2162E /* BasicScene.swift */; };
-		BBD169262581A8F900B2162E /* Triangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD169252581A8F900B2162E /* Triangle.swift */; };
+		BBD169262581A8F900B2162E /* Triangle .swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD169252581A8F900B2162E /* Triangle .swift */; };
 		BBD169292581AC2600B2162E /* Maths.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD169282581AC2600B2162E /* Maths.swift */; };
 		BBD1692B2581E77600B2162E /* Cube.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD1692A2581E77600B2162E /* Cube.swift */; };
 		BBD1692D2582D6D400B2162E /* Renderable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD1692C2582D6D400B2162E /* Renderable.swift */; };
@@ -39,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BB2A93A22586F2CC00B01CA3 /* Icosahedron.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Icosahedron.swift; sourceTree = "<group>"; };
 		BBD16855257DFB8600B2162E /* TestMetal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestMetal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBD16858257DFB8600B2162E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BBD1685C257DFB8800B2162E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -58,7 +60,7 @@
 		BBD1691F25814E2A00B2162E /* Plane.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plane.swift; sourceTree = "<group>"; };
 		BBD169212581523900B2162E /* Primitive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Primitive.swift; sourceTree = "<group>"; };
 		BBD169232581562F00B2162E /* BasicScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicScene.swift; sourceTree = "<group>"; };
-		BBD169252581A8F900B2162E /* Triangle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Triangle.swift; sourceTree = "<group>"; };
+		BBD169252581A8F900B2162E /* Triangle .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Triangle .swift"; sourceTree = "<group>"; };
 		BBD169282581AC2600B2162E /* Maths.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Maths.swift; sourceTree = "<group>"; };
 		BBD1692A2581E77600B2162E /* Cube.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cube.swift; sourceTree = "<group>"; };
 		BBD1692C2582D6D400B2162E /* Renderable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Renderable.swift; sourceTree = "<group>"; };
@@ -151,9 +153,10 @@
 			children = (
 				BBD1691A25814D6E00B2162E /* Node.swift */,
 				BBD1691F25814E2A00B2162E /* Plane.swift */,
-				BBD169252581A8F900B2162E /* Triangle.swift */,
+				BBD169252581A8F900B2162E /* Triangle .swift */,
 				BBD169212581523900B2162E /* Primitive.swift */,
 				BBD1692A2581E77600B2162E /* Cube.swift */,
+				BB2A93A22586F2CC00B01CA3 /* Icosahedron.swift */,
 			);
 			path = Node;
 			sourceTree = "<group>";
@@ -291,13 +294,14 @@
 				BBD1688B257E978500B2162E /* Renderer.swift in Sources */,
 				BBD16891257F018A00B2162E /* Types.swift in Sources */,
 				BBD1691B25814D6E00B2162E /* Node.swift in Sources */,
+				BB2A93A32586F2CC00B01CA3 /* Icosahedron.swift in Sources */,
 				BBD169222581523900B2162E /* Primitive.swift in Sources */,
 				BBD169242581562F00B2162E /* BasicScene.swift in Sources */,
 				BBD1691E25814DE800B2162E /* Scene.swift in Sources */,
 				BBD1692B2581E77600B2162E /* Cube.swift in Sources */,
 				BBD169292581AC2600B2162E /* Maths.swift in Sources */,
 				BBD1692D2582D6D400B2162E /* Renderable.swift in Sources */,
-				BBD169262581A8F900B2162E /* Triangle.swift in Sources */,
+				BBD169262581A8F900B2162E /* Triangle .swift in Sources */,
 				BBD1688D257E9D1200B2162E /* Shaders.metal in Sources */,
 				BBD1692025814E2A00B2162E /* Plane.swift in Sources */,
 				BBD16859257DFB8600B2162E /* AppDelegate.swift in Sources */,
